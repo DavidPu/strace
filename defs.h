@@ -292,7 +292,7 @@ struct tcb {
 #define syserror(tcp)	((tcp)->u_error != 0)
 #define traced(tcp)	((tcp)->qual_flg & QUAL_TRACE)
 #define verbose(tcp)	((tcp)->qual_flg & QUAL_VERBOSE)
-#define abbrev(tcp)	((tcp)->qual_flg & QUAL_ABBREV)
+#define abbrev(tcp)	0 /* ((tcp)->qual_flg & QUAL_ABBREV) */
 #define raw(tcp)	((tcp)->qual_flg & QUAL_RAW)
 #define inject(tcp)	((tcp)->qual_flg & QUAL_INJECT)
 #define filtered(tcp)	((tcp)->flags & TCB_FILTERED)
